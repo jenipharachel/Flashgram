@@ -8,7 +8,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function NavBar() {
+export default function NavBar({setModalOpen}) {
   return (
     <Disclosure as="nav" className="bg-gray-800">
         <>
@@ -18,8 +18,8 @@ export default function NavBar() {
                 <a href="#" className="bg-gray-900 text-white px-3 py-2 rounded-md text-2xl font-bold leading-7 sm:text-3xl sm:truncate" aria-current="page">Flashgram</a>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                  <span className="sr-only">Open main menu</span>
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" onClick={() => setModalOpen(true)}>
+                  <span className="sr-only">Open upload modal</span>
                   <PlusIcon className="block h-6 w-6" aria-hidden="true" />
                 </Disclosure.Button>
                 {/* Profile dropdown */}

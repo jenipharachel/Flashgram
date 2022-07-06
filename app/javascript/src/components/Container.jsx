@@ -5,9 +5,9 @@ import PropTypes from "prop-types";
 
 import NavBar from "components/NavBar";
 
-const Container = ({ children, className = "" }) => (
+const Container = ({ children, className = "" , setModalOpen}) => (
   <>
-    <NavBar />
+    <NavBar setModalOpen={setModalOpen} />
     <div
       className={classnames("max-w-7xl mx-auto px-4 py-2 sm:px-6 lg:px-8", [
         className,
