@@ -5,6 +5,7 @@ import NavBar from "../NavBar";
 const Dashboard = () => {
   return (
     <Container>
+      <h1>Posts</h1>
     </Container>
   )
 }
