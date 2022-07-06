@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 import NavBar from "components/NavBar";
 
-const Container = ({ children, className = "" , setModalOpen}) => (
+const Container = ({ children, className = "", setModalOpen }) => (
   <>
     <NavBar setModalOpen={setModalOpen} />
     <div

@@ -1,4 +1,6 @@
-class PostsController < ApplicationController  
+# frozen_string_literal: true
+
+class PostsController < ApplicationController
   def index
     posts = Post.all
     render status: :ok, json: { posts: posts }
@@ -11,6 +13,7 @@ class PostsController < ApplicationController
   end
 
   private
+
     def post_params
       params.require(:post).permit(:caption)
     end

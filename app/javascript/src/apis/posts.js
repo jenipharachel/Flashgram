@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 
-const list = () => axios.get('/posts');
+const list = () => axios.get("/posts");
 
 const postsApi = { list };
 
