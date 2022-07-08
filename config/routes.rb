@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   constraints(lambda { |req| req.format == :json }) do
     resources :posts, except: %i[new edit]
     resources :users, only: [:create]
+    resource :session, only: :create
   end
 
   root "home#index"
