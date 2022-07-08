@@ -11,6 +11,11 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    @current_user = nil
+    respond_with_success("User logged out!")
+  end
+
   private
 
     def login_params
